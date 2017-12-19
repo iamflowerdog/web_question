@@ -1,0 +1,26 @@
+@media screen and (max-width: 768px) {
+    body {
+        background-color:lightblue;
+    }
+}
+
+@media screen and (min-width: 1080px) {
+    body {
+        background-color:#f0f0f0;
+    }
+}
+
+* {
+    text-align: center;
+}
+
+.email{
+    background: pink;
+    width: 228px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.email:hover{
+    overflow: visible;
+}

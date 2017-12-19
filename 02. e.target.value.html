@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MrYanG</title>
+    <link rel="stylesheet" href="test.css">
+</head>
+<body>
+
+<input type="text" placeholder="请输入内容" id="input">
+
+<script type="text/javascript">
+
+    let inputDOM = document.getElementById("input");
+
+    inputDOM.onchange = function (event) {
+        if (event.target.value === 'huaGou'){
+            console.log('huaGou');
+            location.href = 'http://www.baidu.com'
+        } else if (event.target.value === 'alphaGo'){
+            console.log('alphaGo');
+        }
+    }
+    
+
+</script>
+</body>
+</html>

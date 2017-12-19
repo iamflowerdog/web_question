@@ -1,0 +1,200 @@
+{
+  "label": "订单查询",
+  "filter": [
+    {
+      "name": "我的未完成订单",
+      "query": [
+        {
+          "name": "orderNo",
+          "label": "订单编号",
+          "text":"订单编号",
+          "type": "customerAutoComplete",
+          "placeholder": "请输入完整的订单编号",
+          "labelCol":6,
+          "wrapperCol":14
+        },
+        {
+          "name": "corporationName",
+          "label": "客户名称",
+          "type": "customerAutoComplete",
+          "placeholder": "客户名称支持联想和模糊搜索",
+          "url": "/api/crm/customers/fuzzy?stage="
+        },
+        {
+          "name": "orderStatus",
+          "label": "订单状态",
+          "text":"订单状态",
+          "type": "select",
+          "subId": "9017",
+          "placeholder": "请选择订单状态",
+          "labelCol": 6,
+          "wrapperCol": 14,
+          "url": "/api/dic/list"
+        },
+        {
+          "name": "requirementType",
+          "label": "订单类型",
+          "text":"订单类型",
+          "type": "select",
+          "subId": "9019",
+          "placeholder": "请选择订单状态",
+          "labelCol": 6,
+          "wrapperCol": 14,
+          "url": "/api/dic/list"
+        }
+      ]
+    },
+    {
+      "name": "我的订单",
+      "query": [
+        {
+          "name": "orderNo",
+          "label": "订单编号",
+          "text":"订单编号",
+          "type": "customerAutoComplete",
+          "placeholder": "请输入完整的订单编号",
+          "labelCol":6,
+          "wrapperCol":14
+        },
+        {
+          "name": "corporationName",
+          "label": "客户名称",
+          "type": "customerAutoComplete",
+          "placeholder": "客户名称支持联想和模糊搜索",
+          "url": "/api/crm/customers/fuzzy?stage="
+        },
+        {
+          "name": "orderStatus",
+          "label": "订单状态",
+          "text":"订单状态",
+          "type": "select",
+          "subId": "9017",
+          "placeholder": "请选择订单状态",
+          "labelCol": 6,
+          "wrapperCol": 14,
+          "url": "/api/dic/list"
+        },
+        {
+          "name": "requirementType",
+          "label": "订单类型",
+          "text":"订单类型",
+          "type": "select",
+          "subId": "9019",
+          "placeholder": "请选择订单状态",
+          "labelCol": 6,
+          "wrapperCol": 14,
+          "url": "/api/dic/list"
+        }
+      ]
+    },
+    {
+      "name": "全部订单",
+      "query": [
+        {
+          "name": "orderNo",
+          "label": "订单编号",
+          "text":"订单编号",
+          "type": "customerAutoComplete",
+          "placeholder": "请输入完整的订单编号",
+          "labelCol":6,
+          "wrapperCol":14
+        },
+        {
+          "name": "corporationName",
+          "label": "客户名称",
+          "type": "customerAutoComplete",
+          "placeholder": "客户名称支持联想和模糊搜索",
+          "url": "/api/crm/customers/fuzzy?stage="
+        },
+        {
+          "name": "orderStatus",
+          "label": "订单状态",
+          "text":"订单状态",
+          "type": "select",
+          "subId": "9017",
+          "placeholder": "请选择订单状态",
+          "labelCol": 6,
+          "wrapperCol": 14,
+          "url": "/api/dic/list"
+        },
+        {
+          "name": "requirementType",
+          "label": "订单类型",
+          "text":"订单类型",
+          "type": "select",
+          "subId": "9019",
+          "placeholder": "请选择订单状态",
+          "labelCol": 6,
+          "wrapperCol": 14,
+          "url": "/api/dic/list"
+        },
+        {
+          "name": "adminUserId",
+          "label": "顾问",
+          "text":"顾问",
+          "type": "select",
+          "subId": 0,
+          "placeholder": "请选择顾问",
+          "labelCol": 6,
+          "wrapperCol": 14,
+          "url": "/api/crm/customers/fc/advisers/list"
+        }
+      ]
+    },
+    {
+      "name": "管家服务",
+      "query": [
+        {
+          "name": "orderNo",
+          "label": "订单编号",
+          "text":"订单编号",
+          "type": "customerAutoComplete",
+          "placeholder": "请输入完整的订单编号",
+          "labelCol":6,
+          "wrapperCol":14
+        },
+        {
+          "name": "corporationName",
+          "label": "客户名称",
+          "type": "customerAutoComplete",
+          "placeholder": "客户名称支持联想和模糊搜索",
+          "url": "/api/crm/customers/fuzzy?stage="
+        },
+        {
+          "name": "orderStatus",
+          "label": "订单状态",
+          "text":"订单状态",
+          "type": "select",
+          "subId": "9017",
+          "placeholder": "请选择订单状态",
+          "labelCol": 6,
+          "wrapperCol": 14,
+          "url": "/api/dic/list"
+        },
+        {
+          "name": "requirementType",
+          "label": "订单类型",
+          "text":"订单类型",
+          "type": "select",
+          "subId": "9019",
+          "placeholder": "请选择订单状态",
+          "labelCol": 6,
+          "wrapperCol": 14,
+          "url": "/api/dic/list"
+        },
+        {
+          "name": "adminUserId",
+          "label": "顾问",
+          "text":"顾问",
+          "type": "select",
+          "subId": 0,
+          "placeholder": "请选择顾问",
+          "labelCol": 6,
+          "wrapperCol": 14,
+          "url": "/api/crm/customers/fc/advisers/list"
+        }
+      ]
+    }
+
+  ]
+}

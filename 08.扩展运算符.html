@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MrYanG</title>
+</head>
+<body>
+<script type="text/javascript">
+
+    const formItemLayout = {
+        labelCol: {
+            xs: { span: 8 },
+            sm: { span: 6 },
+        },
+        wrapperCol: {
+            xs: { span: 16 },
+            sm: { span: 14 },
+        },
+    };
+
+    //console.log(...formItemLayout);
+
+    //console.log(...[1, 3, 5]);
+
+    console.log({...formItemLayout});
+
+
+
+    // 数组的扩展
+
+    let [a, ...b] = [1, 2, 3];
+
+    console.log(a, b); // a=1 b=[2,3]
+
+
+   // let {x, y, ...z} = {x:1, y:2, a:3, b:5};
+
+    // 上面代码中，变量z是解构赋值所在的对象。它获取等号右边的所有尚未读取的键（a和b），将它们连同值一起拷贝过来。
+
+   // console.log(x, y, z);
+
+    // let {...c, e} = {x:1, y:2, z:3} // 解构赋值必须是最后一个参数，否则会报错。Rest element must be last element
+
+    const o = Object.create({x: 1, y: 2});
+
+    o.z = 3;
+
+    console.log(o);
+
+     let {x, y, z} = o;
+
+     console.log(x, y, z);
+
+
+</script>
+</body>
+</html>

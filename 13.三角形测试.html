@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MrYanG</title>
+    <style>
+
+        /* 在通过border里面写的结构，如果设置 overflow：hidden 他的子元素会永远hidden无论给他设置的层级多高 */
+        .triangle-red{
+            position: absolute;
+            top:0;
+            left: 0;
+            width: 0;
+            height: 0;
+            border-top: 20px solid red;
+            border-right: 20px solid transparent;
+            overflow: hidden;
+        }
+        .list-item{
+            position: relative;
+            background-color: #999;
+            height: 40px;
+        }
+        .num{
+            position: absolute;
+            top: -17px;
+            left: 0;
+            z-index: 10;
+        }
+
+    </style>
+</head>
+<body>
+
+
+
+
+    <div class="list-item">
+        <div class="triangle-red">
+            <span class="num">44</span>
+        </div>
+    </div>
+    <div class="list-item">
+        <div class="triangle-red">
+            <span class="num">44</span>
+        </div>
+    </div>
+<script type="text/javascript">
+
+    
+
+</script>
+</body>
+</html>

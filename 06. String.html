@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MrYanG</title>
+</head>
+<body>
+<script type="text/javascript">
+
+    
+    let s = "hello";
+    
+    String.prototype.repeatify = function (n) {
+
+        var str = '';
+
+        for (let i=0; i<n; i++){
+            str += this
+        }
+        return str;
+    };
+
+    console.log(s.repeatify(3));
+
+</script>
+</body>
+</html>
