@@ -1,0 +1,749 @@
+[
+  {
+    "title": "团队商机",
+    "filterId": 12101,
+    "sorterData": [],
+    "requestDataUrl":"/api/crm/customers/bo?showType=6",
+    "arguments":"showType=6",
+    "urlSign":"opportunityLeader",
+    "filterUrl":"/schema/opportunity-query-schema",
+    "filterIndex":1,
+    "detailSchemaUrl":"/schema/detailItem-schema",
+    "headerData": [
+      {
+        "key": 1,
+        "name": "客户名称",
+        "showTips":true,
+        "type":"detail",
+        "sort": false,
+        "colName": "name",
+        "colSpan": "3",
+        "xs":{
+          "span":12
+        }
+      },
+      {
+        "key": 3,
+        "type":"text",
+        "name": "客户状态",
+        "showTips":false,
+        "sort": true,
+        "colName": "status",
+        "colSpan": "2",
+        "xs":{
+          "span":6
+        }
+      },
+      {
+        "key": 3,
+        "type":"text",
+        "name": "客户级别",
+        "showTips":false,
+        "sort": true,
+        "colName": "level",
+        "colSpan": "2",
+        "xs":{
+          "span":6
+        }
+      },
+      {
+        "key": 4,
+        "type":"text",
+        "name": "来源",
+        "showTips":true,
+        "sort": false,
+        "colName": "source",
+        "colSpan": "2"
+      },
+      {
+        "key": 9,
+        "type":"datetime",
+        "name": "联系日期",
+        "sort": true,
+        "format":"YYYY-MM-DD HH:mm",
+        "colName": "callTime",
+        "colSpan": "3"
+      },
+      {
+        "key": 3,
+        "type":"text",
+        "name": "确认状态",
+        "showTips":false,
+        "sort": true,
+        "colName": "confirmStatus",
+        "colSpan": "2"
+      },
+      {
+        "key": 8,
+        "type":"datetime",
+        "name": "确认日期",
+        "sort": true,
+        "format":"YYYY-MM-DD HH:mm",
+        "colName": "confirmTime",
+        "colSpan": "3"
+      },
+      {
+        "key": 5,
+        "type":"text",
+        "name": "商机负责人",
+        "showTips":false,
+        "sort": false,
+        "colName": "owner",
+        "colSpan": "2"
+      },
+      {
+        "key": 7,
+        "type":"text",
+        "name": "潜客负责人",
+        "showTips":true,
+        "sort": false,
+        "colName": "follower",
+        "colSpan": "2"
+      },
+      {
+        "key": 9,
+        "type":"text",
+        "name": "拜访类型",
+        "sort": true,
+        "colName": "visitWay",
+        "colSpan": "3"
+      }
+    ]},
+  {
+    "title": "全部待联系商机",
+    "filterId": 12101,
+    "sorterData": [],
+    "requestDataUrl":"/api/crm/customers/bo?showType=3",
+    "arguments":"showType=3",
+    "urlSign":"opportunityLeader",
+    "filterUrl":"/schema/opportunity-query-schema",
+    "filterIndex":2,
+    "detailSchemaUrl":"/schema/detailItem-schema",
+    "headerButtons":[
+      {
+        "useCustomerId":false,
+        "content": "分派",
+        "schemaUrl": "/schema/operation/batchAssignBo",
+        "type":"popup",
+        "size":"small",
+        "name":"multiAssign",
+        "colName":"assign",
+        "className":"headerBtn"
+      },
+      {
+        "content": "全选",
+        "type":"action",
+        "action":"selectAll",
+        "size":"small",
+        "className":"headerBtn"
+      },
+      {
+        "content": "反选",
+        "type":"action",
+        "action":"selectOthers",
+        "size":"small",
+        "className":"headerBtn"
+      }
+    ],
+    "headerData": [
+    {
+      "key": 2,
+      "name": "选择",
+      "showTips": true,
+      "type": "finalCheckBox",
+      "label": "-",
+      "sort": false,
+      "colName": "customerName1",
+      "colSpan": "1",
+      "xs": {
+        "span": 3
+      }
+    },
+    {
+      "key": 2,
+      "name": "客户名称",
+      "showTips":true,
+      "type":"detail",
+      "sort": false,
+      "colName": "name",
+      "colSpan": "4",
+      "xs":{
+        "span":9
+      }
+    },
+    {
+      "key": 3,
+      "type":"text",
+      "name": "客户级别",
+      "showTips":false,
+      "sort": true,
+      "colName": "level",
+      "colSpan": "2",
+      "xs":{
+        "span":4
+      }
+    },
+    {
+      "key": 3,
+      "type":"text",
+      "name": "客户状态",
+      "showTips":true,
+      "sort": false,
+      "colName": "status",
+      "colSpan": "3",
+      "xs":{
+        "span":5
+      }
+    },
+    {
+      "key": 3,
+      "type":"text",
+      "name": "来源",
+      "showTips":false,
+      "sort": false,
+      "colName": "source",
+      "colSpan": "3"
+    },
+    {
+      "key": 4,
+      "type":"text",
+      "name": "负责人",
+      "sort": false,
+      "colName": "owner",
+      "colSpan": "3"
+    },
+    {
+      "key": 5,
+      "type":"datetime",
+      "name": "最后跟进日期",
+      "sort": true,
+
+      "format":"YYYY-MM-DD HH:mm",
+      "colName": "followTime",
+      "colSpan": "3"
+    },
+    {
+      "key": 9,
+      "type":"datetime",
+      "name": "分配日期",
+      "sort": true,
+
+      "format":"YYYY-MM-DD HH:mm",
+      "colName": "assignTime",
+      "colSpan": "3"
+    },
+    {
+      "key": 10,
+      "type":"dropDown",
+      "sort": false,
+      "name": "操作",
+      "colName": "actions",
+      "layoutClass": "col-lg-1 col-md-1 col-sm-2 col-xs-2",
+      "colSpan": "2",
+      "xs":{
+        "span":3
+      },
+      "schema": {
+        "type": "popup",
+        "itemName": "actions",
+        "className": "mainContainer-listItem-actionButtons",
+        "extendedClass": "DefaultPopup",
+        "isVisible": false,
+        "isModal": false,
+        "isCenter": false,
+        "isClickClose": true,
+        "subId": 1230199,
+        "url":"opportunities/optionHeader",
+        "dataUrl1":"optionData@1",
+        "dataUrl":"/api/opportunityOperation",
+        "icon": ""
+      }
+    }
+  ]
+  },
+  {
+    "title": "我的待联系商机",
+    "filterId": 12101,
+    "sorterData": [],
+    "requestDataUrl":"/api/crm/customers/bo?showType=1",
+    "arguments":"showType=1",
+    "urlSign":"opportunityLeader",
+    "filterUrl":"/schema/opportunity-query-schema",
+    "detailSchemaUrl":"/schema/detailItem-schema",
+    "headerButtons":[
+      {
+        "useCustomerId":false,
+        "content": "分派",
+        "schemaUrl": "/schema/operation/batchAssignBo",
+        "type":"popup",
+        "size":"small",
+        "name":"multiAssign",
+        "colName":"assign",
+        "className":"headerBtn"
+      },
+      {
+        "content": "全选",
+        "type":"action",
+        "action":"selectAll",
+        "size":"small",
+        "className":"headerBtn"
+      },
+      {
+        "content": "反选",
+        "type":"action",
+        "action":"selectOthers",
+        "size":"small",
+        "className":"headerBtn"
+      }
+    ],
+    "headerData": [
+      {
+        "key": 2,
+        "name": "选择",
+        "showTips": true,
+        "type": "finalCheckBox",
+        "label": "-",
+        "sort": false,
+        "colName": "customerName1",
+        "colSpan": "1",
+        "xs": {
+          "span": 3
+        }
+      },
+      {
+        "key": 2,
+        "name": "客户名称",
+        "showTips":true,
+        "type":"detail",
+        "sort": false,
+        "colName": "name",
+        "colSpan": "5",
+        "xs":{
+          "span":9
+        }
+      },
+       {
+         "key": 3,
+         "type":"text",
+         "name": "客户级别",
+         "showTips":false,
+         "sort": true,
+         "colName": "level",
+         "colSpan": "2",
+         "xs":{
+           "span":4
+         }
+       },
+       {
+         "key": 3,
+         "type":"text",
+         "name": "客户状态",
+         "showTips":false,
+         "sort": true,
+         "colName": "status",
+         "colSpan": "3",
+         "xs":{
+           "span":5
+         }
+       },
+       {
+         "key": 3,
+         "type":"text",
+         "name": "来源",
+         "showTips":true,
+         "sort": false,
+         "colName": "source",
+         "colSpan": "3"
+       },
+       {
+         "key": 5,
+         "type":"datetime",
+         "name": "最后跟进日期",
+         "sort": true,
+         "format":"YYYY-MM-DD HH:mm",
+         "colName": "followTime",
+         "colSpan": "4"
+       },
+       {
+         "key": 9,
+         "type":"datetime",
+         "name": "分派日期",
+         "sort": true,
+         "format":"YYYY-MM-DD HH:mm",
+         "colName": "assignTime",
+         "colSpan": "4"
+       },
+       {
+         "key": 10,
+         "type":"dropDown",
+         "sort": false,
+         "name": "操作",
+         "colName": "actions",
+         "layoutClass": "col-lg-1 col-md-1 col-sm-2 col-xs-2",
+         "colSpan": "2",
+         "xs":{
+           "span":3
+         },
+         "schema": {
+           "type": "popup",
+           "itemName": "actions",
+           "className": "mainContainer-listItem-actionButtons",
+           "extendedClass": "DefaultPopup",
+           "isVisible": false,
+           "isModal": false,
+           "isCenter": false,
+           "isClickClose": true,
+           "subId": 1230199,
+           "url":"opportunities/optionHeader",
+           "dataUrl1":"optionData@1",
+           "dataUrl":"/api/opportunityOperation",
+           "icon": ""
+         }
+       }
+     ]},
+  {
+    "title": "我的历史商机",
+    "filterId": 12101,
+    "sorterData": [],
+    "requestDataUrl":"/api/crm/customers/bo?showType=4",
+    "arguments":"showType=4",
+    "urlSign":"opportunityLeader",
+    "filterUrl":"/schema/opportunity-query-schema",
+    "filterIndex":3,
+    "detailSchemaUrl":"/schema/detailItem-schema",
+    "headerData": [
+      {
+        "key": 2,
+        "name": "客户名称",
+        "showTips":true,
+        "type":"detail",
+        "sort": false,
+        "colName": "name",
+        "colSpan": "3",
+        "xs":{
+          "span":12
+        }
+      },
+      {
+        "key": 3,
+        "type":"text",
+        "name": "客户状态",
+        "showTips":true,
+        "sort": true,
+        "colName": "status",
+        "colSpan": "2",
+        "xs":{
+          "span":6
+        }
+      },
+      {
+        "key": 3,
+        "type":"text",
+        "name": "客户级别",
+        "showTips":true,
+        "sort": true,
+        "colName": "level",
+        "colSpan": "2",
+        "xs":{
+          "span":6
+        }
+      },
+      {
+        "key": 3,
+        "type":"text",
+        "name": "来源",
+        "showTips":true,
+        "sort": false,
+        "colName": "source",
+        "colSpan": "2"
+      },
+      {
+        "key": 9,
+        "type":"datetime",
+        "name": "联系日期",
+        "sort": true,
+        "format":"YYYY-MM-DD HH:mm",
+        "colName": "callTime",
+        "colSpan": "2"
+      },
+      {
+        "key": 3,
+        "type":"text",
+        "name": "确认状态",
+        "showTips":true,
+        "sort": true,
+        "colName": "confirmStatus",
+        "colSpan": "2"
+      },
+      {
+        "key": 9,
+        "type":"datetime",
+        "name": "确认日期",
+        "sort": true,
+        "format":"YYYY-MM-DD HH:mm",
+        "colName": "confirmTime",
+        "colSpan": "2"
+      },
+      {
+        "key": 7,
+        "type":"text",
+        "name": "潜客负责人",
+        "showTips":true,
+        "sort": false,
+        "colName": "follower",
+        "colSpan": "2"
+      },
+      {
+        "key": 5,
+        "type":"text",
+        "name": "预约拜访对象",
+        "sort": false,
+        "colName": "visitor",
+        "colSpan": "2"
+      },
+      {
+        "key": 5,
+        "type":"text",
+        "name": "预约拜访地址",
+        "showTips":true,
+        "sort": false,
+        "colName": "visitAddress",
+        "colSpan": "2"
+      },
+      {
+        "key": 5,
+        "type":"text",
+        "name": "拜访类型",
+        "sort": false,
+        "colName": "visitWay",
+        "colSpan": "3"
+      }
+    ]},
+  {
+    "title": "活动商机列表",
+    "filterId": 12101,
+    "id": 100,
+    "sorterData": [],
+    "requestDataUrl":"/api/crm/customers/bo?showType=8",
+    "arguments":"showType=8",
+    "urlSign":"opportunityLeader",
+    "filterUrl":"/schema/opportunity-query-schema",
+    "filterIndex":5,
+    "detailSchemaUrl":"/schema/detailItem-schema",
+    "headerData": [
+      {
+        "key": 2,
+        "name": "选择",
+        "showTips": true,
+        "type": "finalCheckBox",
+        "label": "-",
+        "sort": false,
+        "colName": "customerName1",
+        "colSpan": "1",
+        "xs": {
+          "span": 3
+        }
+      },
+      {
+        "key": 2,
+        "name": "客户名称",
+        "showTips":true,
+        "type":"detail",
+        "sort": false,
+        "colName": "name",
+        "colSpan": "4",
+        "xs":{
+          "span":9
+        }
+      },
+      {
+        "key": 3,
+        "type":"text",
+        "name": "客户级别",
+        "showTips":false,
+        "sort": true,
+        "colName": "level",
+        "colSpan": "2",
+        "xs":{
+          "span":4
+        }
+      },
+      {
+        "key": 3,
+        "type":"text",
+        "name": "客户状态",
+        "showTips":true,
+        "sort": false,
+        "colName": "status",
+        "colSpan": "3",
+        "xs":{
+          "span":5
+        }
+      },
+      {
+        "key": 3,
+        "type":"text",
+        "name": "来源",
+        "showTips":false,
+        "sort": false,
+        "colName": "source",
+        "colSpan": "3"
+      },
+      {
+        "key": 4,
+        "type":"text",
+        "name": "负责人",
+        "sort": false,
+        "colName": "owner",
+        "colSpan": "3"
+      },
+      {
+        "key": 5,
+        "type":"datetime",
+        "name": "最后跟进日期",
+        "sort": true,
+
+        "format":"YYYY-MM-DD HH:mm",
+        "colName": "followTime",
+        "colSpan": "3"
+      },
+      {
+        "key": 9,
+        "type":"datetime",
+        "name": "分配日期",
+        "sort": true,
+
+        "format":"YYYY-MM-DD HH:mm",
+        "colName": "assignTime",
+        "colSpan": "3"
+      },
+      {
+        "key": 10,
+        "type":"dropDown",
+        "sort": false,
+        "name": "操作",
+        "colName": "actions",
+        "layoutClass": "col-lg-1 col-md-1 col-sm-2 col-xs-2",
+        "colSpan": "2",
+        "xs":{
+          "span":3
+        },
+        "schema": {
+          "type": "popup",
+          "itemName": "actions",
+          "className": "mainContainer-listItem-actionButtons",
+          "extendedClass": "DefaultPopup",
+          "isVisible": false,
+          "isModal": false,
+          "isCenter": false,
+          "isClickClose": true,
+          "subId": 1230199,
+          "url":"opportunities/optionHeader",
+          "dataUrl1":"optionData@1",
+          "dataUrl":"/api/opportunityOperation",
+          "icon": ""
+        }
+      }
+    ]
+  },
+  {"title": "待认证用户列表",
+    "filterId": 12101,
+    "sorterData": [],
+    "requestDataUrl":"/api/crm/customers/bo?showType=10",
+    "arguments":"showType=10",
+    "urlSign":"opportunity",
+    "filterUrl":"/schema/opportunity-query-schema",
+    "filterIndex":6,
+    "detailSchemaUrl":"/schema/detailItem-schema",
+    "headerData": [
+      {
+        "key": 2,
+        "name": "客户名称",
+        "showTips":true,
+        "type":"detail",
+        "sort": false,
+        "colName": "name",
+        "colSpan": "4",
+        "xs":{
+          "span":9
+        }
+      },
+      {
+        "key": 3,
+        "type":"text",
+        "name": "状态",
+        "showTips":true,
+        "sort": false,
+        "colName": "auditStatusLabel",
+        "colSpan": "3",
+        "xs":{
+          "span":5
+        }
+      },
+      {
+        "key": 4,
+        "type":"text",
+        "name": "申请人",
+        "sort": false,
+        "colName": "contactName",
+        "colSpan": "3"
+      },
+      {
+        "key": 4,
+        "type":"text",
+        "name": "申请人电话",
+        "sort": false,
+        "colName": "contactInfo",
+        "colSpan": "4"
+      },
+      {
+        "key": 4,
+        "type":"imgPreview",
+        "name": "审核图片",
+        "sort": false,
+        "colName": "contactInfo",
+        "placement": "topRight",
+        "colSpan": "4"
+      },
+      {
+        "key": 5,
+        "type":"datetime",
+        "name": "审核发起日期",
+        "sort": true,
+        "format":"YYYY-MM-DD HH:mm",
+        "colName": "followTime",
+        "colSpan": "4"
+      },
+      {
+        "key": 10,
+        "type":"dropDown",
+        "sort": false,
+        "name": "操作",
+        "colName": "actions",
+        "layoutClass": "col-lg-1 col-md-1 col-sm-2 col-xs-2",
+        "colSpan": "2",
+        "idField":"auditId",
+        "xs":{
+          "span":3
+        },
+        "schema": {
+          "type": "popup",
+          "itemName": "actions",
+          "className": "mainContainer-listItem-actionButtons",
+          "extendedClass": "DefaultPopup",
+          "isVisible": false,
+          "isModal": false,
+          "isCenter": false,
+          "isClickClose": true,
+          "subId": 1230199,
+          "url":"opportunities/optionHeader",
+          "dataUrl1":"optionData@1",
+          "dataUrl":"/api/crm/customers/bo/auditOperation",
+          "icon": ""
+        }
+      }
+    ]
+  }
+
+ ]
+
