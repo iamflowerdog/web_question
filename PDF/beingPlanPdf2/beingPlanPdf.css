@@ -1,0 +1,88 @@
+.table{
+            width: 595px;
+            font-family:'PingFangSC-Regular';
+        }
+        .img{
+            float: right;
+        }
+        .hr{
+            margin-top:5px;
+            color: #9f9f9f;
+        }
+        .th{
+            text-align:center;
+            font-size: 18px;
+            padding-top: 25px;
+            font-family:'PingFangSC-Regular';
+        }
+        td{
+            font-size: 12px;
+        }
+        .tr1{
+            text-align:center;
+            padding-top: 10px;
+            color: #666;
+        }
+        .tr2{
+            text-align:left;
+            padding-top: 20px;
+            font-family:'PingFangSC-Regular';
+        }
+        .tr3{
+            padding-left: 30px;
+            padding-top: 20px;
+            font-family:'PingFangSC-Regular';
+        }
+        .tr4{
+            padding-left: 60px;
+            font-size: 12px;
+            padding-top: 17px;
+            font-family:'PingFangSC-Regular';
+        }
+        .tr5{
+            word-wrap: break-word;
+            word-break: normal;
+            padding-left: 60px;
+            font-size: 12px;
+            padding-top: 12px;
+            line-height: 20px;
+            height: auto;
+            color: #666;
+            width: 505px;
+        }
+        .table1{
+            border-collapse: collapse;
+            width: 80%;
+            border-color:#E9EFF4;
+        }
+        .table1 tr:nth-child(odd){
+            background:#F4F9FE;
+        }
+        .table1 td:nth-child(odd){
+            text-align: center;
+            width: 100px;
+            border:1px solid #E9EFF4;
+        }
+        .table1 td:nth-child(even){
+            padding-left: 50px;
+            width: 300px;
+            border:1px solid #E9EFF4;
+        }
+        .tr7{
+            padding-left: 30px;
+            padding-top: 30px;
+            font-size: 12px;
+            color: #666;
+        }
+        .hr1{
+            margin-top:22px;
+            color: #9f9f9f;
+        }
+        .td4{
+            background:url('official seal.png')no-repeat right;
+            float: right;
+            height: 100px;
+            font-size: 12px;
+            line-height:10px;
+            text-align: right;
+        }
