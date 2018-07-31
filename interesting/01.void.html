@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MrYanG</title>
+</head>
+<body>
+    <h2>上述代码定义了一个大龄文艺女青年，每被问到什么时候结婚呀(whenMarry)，happiness都会减1。从执行情况可以看出，无论是普通访问girl.whenMarry，还是void girl.whenMarry都会使她的happiness--。而如果把void换成delete操作符写成delete girl.whenMarry，她的happiness就不会减了，因为delete操作符不会对girl.whenMarry求值。</h2>
+<script type="text/javascript">
+
+    // void  定义 注意：GetValue一定要调用，即使它的值不会被用到，但是这个表达式可能会有副作用(side-effects)。
+
+    let happiness = 10;
+    let girl = {
+        get whenMarry() {
+            happiness--;
+            return 1/0;
+        },
+        get happiness() {
+            return happiness;
+        }
+    };
+
+    console.log(girl.whenMarry); //调用了whenMarry的get方法
+    console.log(girl.happiness); // 9
+
+    void girl.whenMarry; //调用了whenMarry的get方法
+    console.log(girl.happiness); // 8
+
+    delete girl.whenMarry; //没有调用whenMarry的get方法
+    console.log(girl.happiness); //还是8
+
+
+
+</script>
+</body>
+</html>
