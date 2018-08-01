@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MrYanG</title>
+</head>
+<body>
+<H1>javascript设计模式总结</H1>
+<A href="https://blog.suisuijiang.com/javascript-design-pattern-summary-1/">URL</A>
+
+<script type="text/javascript">
+
+    // 创建一个工具类
+    class Util {
+        constructor() {
+            this.name = 'yyh class'
+        }
+    }
+
+
+    // 创建一个能用工具类生成实例的函数
+    function createSingleton(Class) {
+        let instance = null;
+        return function () {
+            if (!instance){
+                return instance = new Class();
+            }
+            return instance;
+        }
+    }
+
+    const getUtil = createSingleton(Util);
+
+    // console.log(getUtil);
+
+    const util1 = getUtil();
+    const util2 = getUtil();
+
+    // console.log(util1 === util2); // true
+
+
+
+
+</script>
+</body>
+</html>
