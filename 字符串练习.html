@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label for="search">Search</label>
+<input type="text" id="search">
+<button id="btn">Search</button>
+<script type="text/javascript">
+      var searchInput = document.getElementById('search');
+      var btn = document.getElementById('btn');
+      var newArr = [];
+      var num = 1;
+      btn.addEventListener('click',function () {
+        // 获取用户的输入
+        num++;
+        var text = searchInput.value;
+        console.log(text);
+        if (num >= 5) {
+          newArr.pop();
+        }else{
+          newArr.unshift(text)
+        }
+        searchInput.value = '';
+        searchInput.focus();
+      });
+      console.log(newArr);
+      var pD = document.createElement('p');
+      for (var i = 0; i < newArr.length; i++) {
+        pD.textContent += newArr[i]
+      }
+      document.body.appendChild(pD)
+
+</script>
+</body>
+</html>

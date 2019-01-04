@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="//unpkg.com/iview/dist/styles/iview.css">
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        img {
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    <i-select v-model="model1" style="width:200px" @on-change="handlechange">
+        <i-option v-for="item in cityList1"
+                  :value="item.value"
+                  :key="item.value"
+                  >{{ item.label }}</i-option>
+    </i-select>
+    <i-select v-model="model2" style="width:200px" @on-open-change="handlechange">
+        <i-option v-for="item in cityList2"
+                  :value="item.value"
+                  :key="item.value"
+                  :disabled="item.disabled"
+        >{{ item.label }}</i-option>
+    </i-select>
+</div>
+<script src="//vuejs.org/js/vue.min.js"></script>
+<script src="//unpkg.com/iview/dist/iview.min.js"></script>
+<script type="text/javascript">
+  new Vue({
+    el: '#app',
+    data: {
+      model1: '',
+      cityList1: [
+        {
+          value: 'zhengzhou',
+          label: 'zhengzhou'
+        },
+        {
+          value: 'beijing',
+          label: 'beijing'
+        },
+        {
+          value: 'guangzhou',
+          label: 'guangzhou'
+        }
+      ],
+      model2: '',
+      cityList2: [
+        {
+          value: 'zhengzhou',
+          label: 'zhengzhou'
+        },
+        {
+          value: 'beijing',
+          label: 'beijing',
+        },
+        {
+          value: 'guangzhou',
+          label: 'guangzhou'
+        }
+      ],
+    },
+    methods: {
+      handlechange(e){
+        console.log(this.model1);
+
+        this.cityList2.forEach((item) => {
+          if(item.value === e) {
+            item.disabled = true;
+          }else {
+            item.disabled = false;
+          }
+        })
+
+        console.log(this.cityList2)
+
+      }
+    }
+  })
+</script>
+</body>
+</html>
