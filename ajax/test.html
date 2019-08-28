@@ -1,0 +1,47 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312 " />
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="cache-control" content="no-cache">
+<meta http-equiv="expires" content="0">  
+    <title>Title</title>
+</head>
+<body>
+<div id="div"></div>
+<script type="text/javascript">
+
+function createXmlHttp() {
+    var xmlHttp;
+    try {
+        xmlHttp = new XMLHttpRequest();
+    } catch (e) {
+        try {
+            xmlHttp = new ActiveXObject("Msxml2.XMLHTTP");
+        } catch (e) {
+            try {
+                xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
+            } catch (e) {
+                alert("???̫?ϣ????ʹ?ajax");
+            }
+        }
+    }
+
+    return xmlHttp;
+}
+
+window.onload=function(){
+       var xmlHttp = createXmlHttp();
+       console.log(xmlHttp);
+        xmlHttp.open("get","https://api.apiopen.top/getJoke?page=1&count=2&type=video1", true);
+        xmlHttp.send(null);
+        xmlHttp.onreadystatechange = function () {
+          console.log(xmlHttp)
+//            if (xmlHttp.readyState==4&&xmlHttp.status == 200) {
+//              console.log(xmlHttp.responseText)
+//                document.getElementById("div").innerText=xmlHttp.responseText;
+//            }
+        };
+};
+</script>
+</body>
+</html>
