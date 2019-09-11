@@ -40,6 +40,10 @@
     <button onclick="handleClick()">
       提交
     </button>
+
+    <button onclick="handleShow()">
+      回显
+    </button>
   </div>
 
   <!-- Include the Quill library -->
@@ -119,6 +123,20 @@
         },
         success: function (res) {
           alert(res.msg)
+        }
+      })
+    }
+
+    function handleShow() {
+      $.ajax({
+        url: 'https://testepms.epark.com/api/console/nl/text/27',
+        type: 'get',
+        dataType: 'json',
+        headers: {
+          "Content-Type": "application/json;charset=utf-8"
+        },
+        success: function (res) {
+          quill.container.firstChild.innerHTML = res.data.content;
         }
       })
     }
