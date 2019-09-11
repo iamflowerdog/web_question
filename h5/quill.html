@@ -79,7 +79,29 @@
     imgDom.addEventListener('change', updateImg);
 
     function updateImg(event) {
-      console.log(event.target.files[0]);
+      var file = event.target.files[0]
+      var formData = new FormData();
+      formData.append('file', file);        //追加的自定义节点，第一个参数：php用$_FILES接收时的key；第2个参数：当前图片
+      $.ajax({
+        url: 'https://testepms.epark.com/api/console/upload',
+        type: 'POST',
+        data: formData,
+        dataType: 'text',
+        traditional: true,
+        contentType: false,
+        processData: false,
+        cache: false,
+        headers: {
+          'x-auth-token': '92519300-8b47-4163-8f92-b5b21de3fc45'
+        },
+        success: function (res) {
+          //图片上传成功之后的回调
+          const range = quill.getSelection();
+          if (range) {
+            quill.insertEmbed(range.index+1, 'image',""+res); //将上传好的图片，插入到富文本的range.index（当前光标处）
+          }
+        }
+      })
     }
 
     function handleClick() {
