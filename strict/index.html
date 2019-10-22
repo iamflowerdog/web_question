@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MrYanG</title>
+</head>
+<body>
+<script type="text/javascript">
+
+  'use strict';
+
+//  hhssxxrrww = 3; // 开启严格模式下面👇这行代码不会执行，并抛出异常，不开启严格模式，window对象添加一个属性。
+
+  console.log(3289822)
+
+  // 普通的JavaScript里面给一个错误命名的变量名赋值会使全局对象新增一个属性并继续“工作
+
+  // 严格模式中意外创建全局变量被抛出错误替代：
+
+  var obj = {};
+
+  Object.defineProperty(obj, "x", { value: 13,  writable: false});
+
+//  obj.x = 4; // Cannot assign to read only property 'x' of object '#<Object>'
+
+  var obj1 = { get x() { return 6 }};
+
+//  obj1.x = 5; // Cannot set property x of #<Object> which has only a getter
+
+//  NaN = 4; // Cannot assign to read only property 'NaN' of object '#<Window>'
+
+  // 在严格模式下, 试图删除不可删除的属性时会抛出异常(之前这种操作不会产生任何效果):
+//  delete Object.prototype // Cannot delete property 'prototype' of function Object() { [native code] }
+
+
+
+</script>
+</body>
+</html>
